@@ -1,1 +1,1 @@
-# Portfolio
+Welcome to my personal portfolio! Built with Next.js, this site showcases my skills and projects as a MERN stack developer. It highlights my expertise in creating dynamic, responsive web applications with a focus on clean code, modern design, and performance optimization. Explore my work, and let's connect to build something great together
