@@ -1,27 +1,10 @@
-"use client";
-import Loader from "@/components/Loader/Loader";
-import { useEffect, useState } from "react";
+import Home from '@/components/Home/Home'
+import React from 'react'
 
-function MyApp() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2150);
-  }, []);
-
+const page = () => {
   return (
-    <>
-      {!isLoading ? (
-        <div className="bg-[#252525] min-h-screen">
-          <h1 className="text-white">My Portfolio</h1>
-        </div>
-      ) : (
-        <Loader />
-      )}
-    </>
-  );
+    <Home />
+  )
 }
 
-export default MyApp;
+export default page

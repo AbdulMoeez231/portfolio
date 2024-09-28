@@ -8,10 +8,16 @@
   font-weight: normal;
   font-style: normal;
 }
+body {
+  font-family: "MyFont", sans-serif;
+}
+.container {
+  @apply mx-auto px-5 md:px-10 lg:px-12 xl:px-14 max-w-full lg:max-w-[1240px];
+}
 .loader {
   height: 3px;
   background-color: #252525;
-  animation: loader 2900ms;
+  animation: loader 3300ms;
 }
 @keyframes loader {
   0% {
@@ -41,8 +47,7 @@
 }
 .my-name {
   top: 85%;
-  animation: name 2900ms;
-  font-family: "MyFont", sans-serif;
+  animation: name 3300ms;
 }
 @keyframes name {
   0% {
@@ -54,4 +59,56 @@
   80% {
     top: 120%;
   }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1000ms;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-in {
+  opacity: 1;
+}
+.pop-up {
+  opacity: 0;
+  margin-top: 10px;
+  animation: pop-up 1000ms;
+}
+
+@keyframes pop-up {
+  0% {
+    margin-top: 10px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+.pop-up {
+  margin-top: 0px;
+}
+
+.text-gradient {
+  background: linear-gradient(
+    113.9deg,
+    rgb(255, 7, 7) -4.5%,
+    rgb(255, 255, 5) 98.8%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bg-gradient {
+  background: linear-gradient(
+    113.9deg,
+    rgb(255, 7, 7) -4.5%,
+    rgb(255, 255, 5) 98.8%
+  );
 }
