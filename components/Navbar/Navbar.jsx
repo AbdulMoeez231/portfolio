@@ -39,29 +39,29 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="container py-5 flex justify-between items-center text-white fade-in">
+            <div className="container py-5 flex justify-between items-baseline text-white fade-in">
                 <h1 className="text-2xl font-bold cursor-default">Moeez.</h1>
                 <div>
                     <ul
                         ref={ulRef}
-                        className="relative flex items-center font-medium"
+                        className="relative flex items-center font-medium  text-sm sm:text-base"
                     >
                         <li
-                            className="cursor-pointer px-5"
+                            className="cursor-pointer px-2 sm:px-5 max-sm:hidden"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >
                             About
                         </li>
                         <li
-                            className="cursor-pointer px-5"
+                            className="cursor-pointer px-2 sm:px-5"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >
                             Projects
                         </li>
                         <li
-                            className="cursor-pointer px-5"
+                            className="cursor-pointer px-2 sm:px-5"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >
