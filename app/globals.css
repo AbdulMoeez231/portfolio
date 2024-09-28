@@ -112,3 +112,16 @@ body {
     rgb(255, 255, 5) 98.8%
   );
 }
+
+.icon-animation {
+  animation: icon 2000ms infinite alternate linear;
+}
+
+@keyframes icon {
+  0% {
+    transform: translateY(50px); /* Initial position */
+  }
+  100% {
+    transform: translateY(-30px); /* Move up by 10px */
+  }
+}
