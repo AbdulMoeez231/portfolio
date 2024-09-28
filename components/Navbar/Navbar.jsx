@@ -39,7 +39,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="container py-5 flex justify-between items-baseline text-white fade-in">
+            <div className="container py-5 flex justify-between items-baseline text-white fade-in pop-up">
                 <h1 className="text-2xl font-bold cursor-default">Moeez.</h1>
                 <div>
                     <ul

@@ -78,21 +78,17 @@ body {
   opacity: 1;
 }
 .pop-up {
-  opacity: 0;
-  margin-top: 10px;
+  transform: translateY(0px);
   animation: pop-up 1000ms;
 }
 
 @keyframes pop-up {
   0% {
-    margin-top: 10px;
+    transform: translateY(10px);
   }
   100% {
-    margin-top: 0px;
+    transform: translateY(0px);
   }
-}
-.pop-up {
-  margin-top: 0px;
 }
 
 .text-gradient {

@@ -3,8 +3,7 @@ import React from 'react'
 const HeroSection = () => {
     return (
         <div className='container flex items-end justify-between fade-in'>
-            <div>
-
+            <div className='pop-up'>
                 <h1 className='text-white text-3xl sm:text-4xl font-extrabold mt-20' style={{ lineHeight: "55px" }}>Hi, <br className='sm:hidden' /> I'm <span className='text-gradient'>Abdul Moeez.</span> <br />
                     Full stack developer based in <br /> Lahore, Pakistan.</h1>
                 <p className='text-white text-opacity-80 max-w-[600px] leading-relaxed mt-5'>As a developer, I enjoy making concepts come to life on the internet. I'm all about making enjoyable user experiences, whether it be by designing slick user interfaces or developing reliable back-end systems.</p>
