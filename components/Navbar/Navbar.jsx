@@ -47,18 +47,20 @@ const Navbar = () => {
                         className="relative flex items-center font-medium  text-sm sm:text-base"
                     >
                         <li
-                            className="cursor-pointer px-2 sm:px-5 max-sm:hidden"
+                            className="cursor-pointer px-2 sm:px-5"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >
-                            About
+                            Projects
                         </li>
                         <li
                             className="cursor-pointer px-2 sm:px-5"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >
-                            Projects
+                            <a href="#capabilities">
+                                Capabilities
+                            </a>
                         </li>
                         <li
                             className="cursor-pointer px-2 sm:px-5"

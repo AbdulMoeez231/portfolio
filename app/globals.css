@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "MyFont";
   src: url("fonts/PlaywriteDEGrund-VariableFont_wght.ttf") format("truetype");
@@ -17,7 +21,7 @@ body {
 .loader {
   height: 3px;
   background-color: #252525;
-  animation: loader 3500ms;
+  animation: loader 3300ms;
 }
 @keyframes loader {
   0% {
@@ -38,11 +42,11 @@ body {
   }
   77% {
     width: 100%;
-    height: 100vh;
+    height: 100%;
   }
   100% {
     width: 100%;
-    height: 100vh;
+    height: 100%;
   }
 }
 .my-name {
