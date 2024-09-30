@@ -44,7 +44,7 @@ const Navbar = () => {
                 <div>
                     <ul
                         ref={ulRef}
-                        className="relative flex items-center font-medium  text-sm sm:text-base"
+                        className="relative flex items-center font-medium  text-[10px] xs:text-sm sm:text-base"
                     >
                         <li
                             className="cursor-pointer px-2 sm:px-5"

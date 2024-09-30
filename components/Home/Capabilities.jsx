@@ -19,37 +19,37 @@ import Image from 'next/image'
 const Capabilities = () => {
     return (
         <>
-            <div className='py-14' id='capabilities'>
-                <h1 className='text-white font-bold text-3xl text-center'>
+            <div className='pt-14 pb-5 md:pb-14' id='capabilities'>
+                <h1 className='text-white font-bold text-base sm:text-xl md:text-2xl lg:text-3xl text-center'>
                     SKILLS
                 </h1>
-                <div className='py-20'>
+                <div className='py-14 md:py-20'>
                     <Marquee
                         pauseOnHover
                     >
-                        <div className='flex gap-x-28'>
-                            <Image src={html} alt="Html logo" className='w-[80px] h-[80px]' />
-                            <Image src={css} alt="Html logo" className='w-[80px] h-[80px]' />
-                            <Image src={js} alt="Html logo" className='w-[80px] h-[80px]' />
-                            <Image src={react} alt="Html logo" className='w-[80px] h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
-                            <Image src={next} alt="Html logo" className='w-[80px] h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
-                            <Image src={sass} alt="Html logo" className='w-[80px] h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
-                            <Image src={bootstrap} alt="Html logo" className='w-[80px] h-[80px]' />
+                        <div className='flex gap-x-14 md:gap-x-28'>
+                            <Image src={html} alt="Html logo" className='w-[60px] md:w-[80px] h-[60px] md:h-[80px] ml-10' />
+                            <Image src={css} alt="Html logo" className='w-[60px] md:w-[80px] h-[60px] md:h-[80px]' />
+                            <Image src={js} alt="Html logo" className='w-[60px] md:w-[80px] h-[60px] md:h-[80px]' />
+                            <Image src={react} alt="Html logo" className='w-[60px] md:w-[80px] h-[60px] md:h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
+                            <Image src={next} alt="Html logo" className='w-[60px] md:w-[80px] h-[60px] md:h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
+                            <Image src={sass} alt="Html logo" className='w-[60px] md:w-[80px] h-[60px] md:h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
+                            <Image src={bootstrap} alt="Html logo" className='w-[60px] md:w-[80px] h-[60px] md:h-[80px]' />
                         </div>
                     </Marquee>
-                    <div className='mt-20'>
+                    <div className='mt-14 md:mt-20'>
                         <Marquee
                             pauseOnHover
                             direction='right'
                         >
-                            <div className='flex gap-x-28'>
-                                <Image src={mui} alt="Html logo" className='w-[80px] h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
-                                <Image src={figma} alt="Html logo" className='w-[80px] h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
-                                <Image src={shopify} alt="Html logo" className='w-[80px] h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
-                                <Image src={mongodb} alt="Html logo" className='w-[80px] h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
-                                <Image src={expressjs} alt="Html logo" className='w-[80px] h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
-                                <Image src={nodejs} alt="Html logo" className='w-[80px] h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
-                                <Image src={gsap} alt="Html logo" className='w-[80px] h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
+                            <div className='flex gap-x-14 md:gap-x-28'>
+                                <Image src={mui} alt="Html logo" className='w-[60px] md:w-[80px] h-[60px] md:h-[80px] ml-10' style={{ filter: 'brightness(0) invert(1)' }} />
+                                <Image src={figma} alt="Html logo" className='w-[60px] md:w-[80px] h-[60px] md:h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
+                                <Image src={shopify} alt="Html logo" className='w-[60px] md:w-[80px] h-[60px] md:h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
+                                <Image src={mongodb} alt="Html logo" className='w-[60px] md:w-[80px] h-[60px] md:h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
+                                <Image src={expressjs} alt="Html logo" className='w-[60px] md:w-[80px] h-[60px] md:h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
+                                <Image src={nodejs} alt="Html logo" className='w-[60px] md:w-[80px] h-[60px] md:h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
+                                <Image src={gsap} alt="Html logo" className='w-[60px] md:w-[80px] h-[60px] md:h-[80px]' style={{ filter: 'brightness(0) invert(1)' }} />
                             </div>
                         </Marquee>
                     </div>
