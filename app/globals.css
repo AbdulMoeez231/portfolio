@@ -97,9 +97,12 @@ body {
 
 .text-gradient {
   background: linear-gradient(
-    113.9deg,
-    rgb(255, 7, 7) -4.5%,
-    rgb(255, 255, 5) 98.8%
+    90deg,
+    #ee45e7 -118.07%,
+    #d23fe6 -72.92%,
+    #a434e4 -6.79%,
+    #feaa55 133.87%,
+    #5a22e0 519.31%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -107,9 +110,12 @@ body {
 }
 .bg-gradient {
   background: linear-gradient(
-    113.9deg,
-    rgb(255, 7, 7) -4.5%,
-    rgb(255, 255, 5) 98.8%
+    90deg,
+    #ee45e7 -118.07%,
+    #d23fe6 -72.92%,
+    #a434e4 -6.79%,
+    #feaa55 133.87%,
+    #5a22e0 519.31%
   );
 }
 
