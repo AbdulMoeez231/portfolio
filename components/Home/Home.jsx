@@ -6,26 +6,27 @@ import Capabilities from "./Capabilities";
 import Expertise from "./Expertise";
 
 function Home() {
-    const [isLoading, setIsLoading] = useState(true);
-    useEffect(() => {
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 2600);
-    }, []);
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2600);
+  }, []);
 
-    return (
-        <>
-            {!isLoading ? (
-                <div className="bg-[#191A17] min-h-screen">
-                    <HeroSection />
-                    <Capabilities />
-                    <Expertise />
-                </div>
-            ) : (
-                <Loader />
-            )}
-        </>
-    );
+  return (
+    <>
+      {!isLoading ? (
+        <div className="bg-[#191A17] min-h-screen">
+          <HeroSection />
+          <Capabilities />
+          <Expertise />
+          <Capabilities />
+        </div>
+      ) : (
+        <Loader />
+      )}
+    </>
+  );
 }
 
 export default Home;
