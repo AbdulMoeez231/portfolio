@@ -81,7 +81,62 @@ const ProjectCards = () => {
   }, [windowWidth]);
 
   return (
-    <div className="pl-3 sm:pl-5 mt-10">
+    <div className="pl-3 sm:pl-5 mt-5 space-y-10">
+      <Link
+        href="https://www.careerjustimagine.com/"
+        target="_blank"
+        className={"group mt-5"}
+      >
+        <div className="relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
+          <div className="max-sm:ml-[4%] mr-6 p-5 border border-white rounded md:max-w-md text-white">
+            <h4 className="text-xl font-bold font-heading">
+              Guideline dream home
+            </h4>
+            <p className="text-sm opacity-40 uppercase mt-3">FURNITURE</p>
+            <div className="mt-4 mb-7 line-clamp-4">
+              A platform for searching full-time jobs and freelance projects, or
+              creating recruiter accounts. Includes identity card verification
+              for freelancers to ensure trust.
+            </div>
+
+            <div>
+              <p className="text-sm opacity-80 mb-3">Technologies:</p>
+              <div className="flex gap-x-5 text-white mt-5">
+                <IconBrandMongodb />
+                <IconBrandNodejs />
+                <IconBrandReact />
+                <IconBrandTailwind />
+                <IconBrandAws />
+              </div>
+            </div>
+          </div>
+          <section
+            className="relative w-full cursor-pointer group overflow-hidden"
+            id={`grid1`}
+          >
+            <div
+              className="grid-inner flex h-full flex-row-reverse gap-x-4 group-hover:opacity-80 transition-opacity"
+              data-scroll
+              data-scroll-speed="-6"
+              data-scroll-direction="horizontal"
+            >
+              {imagesGallary.map((image, imgIdx) => {
+                return (
+                  <div className="min-w-[370px] min-h-[305px]" key={imgIdx}>
+                    <Image
+                      src={image}
+                      width={370}
+                      alt="Image"
+                      height={280}
+                      className="w-full max-w-lg h-full object-cover rounded-md"
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        </div>
+      </Link>
       <Link
         href="https://www.careerjustimagine.com/"
         target="_blank"
