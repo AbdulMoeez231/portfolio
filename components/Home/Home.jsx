@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import HeroSection from "./HeroSection";
 import Capabilities from "./Capabilities";
 import Expertise from "./Expertise";
+import Projects from "../Projects/Projects";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,7 +21,7 @@ function Home() {
           <HeroSection />
           <Capabilities />
           <Expertise />
-          <Capabilities />
+          <Projects />
         </div>
       ) : (
         <Loader />

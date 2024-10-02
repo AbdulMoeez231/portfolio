@@ -1,0 +1,144 @@
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import { gsap } from "gsap";
+import {
+  IconBrandAws,
+  IconBrandMongodb,
+  IconBrandNodejs,
+  IconBrandReact,
+  IconBrandTailwind,
+} from "@tabler/icons-react";
+
+function clamp(min, input, max) {
+  return Math.max(min, Math.min(input, max));
+}
+
+function mapRange(in_min, in_max, input, out_min, out_max) {
+  return ((input - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+}
+
+const imagesGallary = [
+  "/assets/imagine/img-1.png",
+  "/assets/imagine/img-2.png",
+  "/assets/imagine/img-3.png",
+  "/assets/imagine/img-4.png",
+  "/assets/imagine/img-5.png",
+];
+const ProjectCards = () => {
+  const [windowWidth, setWindowWidth] = useState();
+  useEffect(() => {
+    const onResize = () => {
+      setWindowWidth(
+        Math.min(window.innerWidth, document.documentElement.offsetWidth)
+      );
+    };
+
+    window.addEventListener("resize", onResize, false);
+    onResize();
+
+    return () => {
+      window.removeEventListener("resize", onResize, false);
+    };
+  }, []);
+  const gridScroller = (gridElem, scroll, invert = false) => {
+    const gridWrap = document.querySelector("#projects");
+    const gridInner = gridElem;
+    const gridWrapRect = gridWrap?.getBoundingClientRect();
+    const gridInnerRect = gridInner?.getBoundingClientRect();
+
+    const start = gridWrapRect?.top + 400;
+    const end = gridWrapRect?.top + 1200 + gridWrapRect?.height + 2000;
+    let progress = mapRange(start, end, scroll, 0, 1);
+    progress = clamp(0, progress, 1);
+    let x;
+    if (windowWidth < 768) {
+      x = progress * gridInnerRect?.width * 2.5;
+    } else {
+      x = progress * gridInnerRect?.width * 0.5;
+    }
+    const imagesCard = gridInner?.querySelectorAll("img");
+    gsap.to(imagesCard, {
+      x: invert ? -x : x,
+      ease: "none",
+      duration: 0,
+    });
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('[id^="grid"] .grid-inner');
+      sections.forEach((section) => {
+        gridScroller(section, window.scrollY);
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [windowWidth]);
+
+  return (
+    <div className="pl-3 sm:pl-5 mt-10">
+      <Link
+        href="https://www.careerjustimagine.com/"
+        target="_blank"
+        className={"group"}
+      >
+        <div className="relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
+          <div className="max-sm:ml-[4%] mr-6 p-5 border border-white rounded md:max-w-md text-white">
+            <h4 className="text-xl font-bold font-heading">
+              Guideline dream home
+            </h4>
+            <p className="text-sm opacity-40 uppercase mt-3">FURNITURE</p>
+            <div className="mt-4 mb-7 line-clamp-4">
+              A platform for searching full-time jobs and freelance projects, or
+              creating recruiter accounts. Includes identity card verification
+              for freelancers to ensure trust.
+            </div>
+
+            <div>
+              <p className="text-sm opacity-80 mb-3">Technologies:</p>
+              <div className="flex gap-x-5 text-white mt-5">
+                <IconBrandMongodb />
+                <IconBrandNodejs />
+                <IconBrandReact />
+                <IconBrandTailwind />
+                <IconBrandAws />
+              </div>
+            </div>
+          </div>
+          <section
+            className="relative w-full cursor-pointer group overflow-hidden"
+            id={`grid1`}
+          >
+            <div
+              className="grid-inner flex h-full flex-row-reverse gap-x-4 group-hover:opacity-80 transition-opacity"
+              data-scroll
+              data-scroll-speed="-6"
+              data-scroll-direction="horizontal"
+            >
+              {imagesGallary.map((image, imgIdx) => {
+                return (
+                  <div className="min-w-[370px] min-h-[305px]" key={imgIdx}>
+                    <Image
+                      src={image}
+                      width={370}
+                      alt="Image"
+                      height={280}
+                      className="w-full max-w-lg h-full object-cover rounded-md"
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        </div>
+      </Link>
+    </div>
+  );
+};
+
+export default ProjectCards;
