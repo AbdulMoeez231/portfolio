@@ -136,7 +136,7 @@ const ProjectCards = () => {
                       width={370}
                       alt="Image"
                       height={280}
-                      className="w-full max-w-lg h-full object-cover rounded-md"
+                      className="w-full h-full object-cover rounded-md"
                     />
                   </div>
                 );
@@ -186,7 +186,7 @@ const ProjectCards = () => {
                       width={370}
                       alt="Image"
                       height={280}
-                      className="w-full max-w-lg h-full object-cover rounded-md"
+                      className="w-full h-full object-cover rounded-md"
                     />
                   </div>
                 );
