@@ -8,6 +8,7 @@ import {
   IconBrandMongodb,
   IconBrandNodejs,
   IconBrandReact,
+  IconBrandStripe,
   IconBrandTailwind,
 } from "@tabler/icons-react";
 
@@ -19,12 +20,19 @@ function mapRange(in_min, in_max, input, out_min, out_max) {
   return ((input - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
 }
 
-const imagesGallary = [
+const imagineImagesGallary = [
   "/assets/imagine/img-1.png",
   "/assets/imagine/img-2.png",
   "/assets/imagine/img-3.png",
   "/assets/imagine/img-4.png",
   "/assets/imagine/img-5.png",
+];
+const furnotureImagesGallary = [
+  "/assets/furniture/img-1.png",
+  "/assets/furniture/img-2.png",
+  "/assets/furniture/img-3.png",
+  "/assets/furniture/img-4.png",
+  "/assets/furniture/img-5.png",
 ];
 const ProjectCards = () => {
   const [windowWidth, setWindowWidth] = useState();
@@ -81,18 +89,18 @@ const ProjectCards = () => {
   }, [windowWidth]);
 
   return (
-    <div className="pl-3 sm:pl-5 mt-5 space-y-10">
+    <div className="mt-5 space-y-10">
       <Link
         href="https://www.careerjustimagine.com/"
         target="_blank"
         className={"group mt-5"}
       >
         <div className="relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
-          <div className="max-sm:ml-[4%] mr-6 p-5 border border-white rounded md:max-w-md text-white">
+          <div className="ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 p-5 border border-white rounded md:max-w-md text-white">
             <h4 className="text-xl font-bold font-heading">
-              Guideline dream home
+              Just imagine careers
             </h4>
-            <p className="text-sm opacity-40 uppercase mt-3">FURNITURE</p>
+            <p className="text-sm opacity-40 uppercase mt-3">IMAGINE</p>
             <div className="mt-4 mb-7 line-clamp-4">
               A platform for searching full-time jobs and freelance projects, or
               creating recruiter accounts. Includes identity card verification
@@ -120,7 +128,7 @@ const ProjectCards = () => {
               data-scroll-speed="-6"
               data-scroll-direction="horizontal"
             >
-              {imagesGallary.map((image, imgIdx) => {
+              {imagineImagesGallary.map((image, imgIdx) => {
                 return (
                   <div className="min-w-[370px] min-h-[305px]" key={imgIdx}>
                     <Image
@@ -137,21 +145,16 @@ const ProjectCards = () => {
           </section>
         </div>
       </Link>
-      <Link
-        href="https://www.careerjustimagine.com/"
-        target="_blank"
-        className={"group"}
-      >
-        <div className="relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
-          <div className="max-sm:ml-[4%] mr-6 p-5 border border-white rounded md:max-w-md text-white">
+      <Link href="http://gldreamhome.com/" target="_blank" className={"group"}>
+        <div className="mt-5 relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
+          <div className="ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 p-5 border border-white rounded md:max-w-md text-white">
             <h4 className="text-xl font-bold font-heading">
               Guideline dream home
             </h4>
             <p className="text-sm opacity-40 uppercase mt-3">FURNITURE</p>
             <div className="mt-4 mb-7 line-clamp-4">
-              A platform for searching full-time jobs and freelance projects, or
-              creating recruiter accounts. Includes identity card verification
-              for freelancers to ensure trust.
+              A furniture store with Stripe integration for secure payments and
+              advanced filtering options for easy product discovery.
             </div>
 
             <div>
@@ -160,8 +163,8 @@ const ProjectCards = () => {
                 <IconBrandMongodb />
                 <IconBrandNodejs />
                 <IconBrandReact />
+                <IconBrandStripe />
                 <IconBrandTailwind />
-                <IconBrandAws />
               </div>
             </div>
           </div>
@@ -175,9 +178,9 @@ const ProjectCards = () => {
               data-scroll-speed="-6"
               data-scroll-direction="horizontal"
             >
-              {imagesGallary.map((image, imgIdx) => {
+              {furnotureImagesGallary.map((image, imgIdx) => {
                 return (
-                  <div className="min-w-[370px] min-h-[305px]" key={imgIdx}>
+                  <div className="min-w-[370px] min-h-[280px]" key={imgIdx}>
                     <Image
                       src={image}
                       width={370}

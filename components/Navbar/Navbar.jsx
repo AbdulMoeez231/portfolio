@@ -51,7 +51,7 @@ const Navbar = () => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="projects">Projects</a>
+              <a href="#projects">Projects</a>
             </li>
             <li
               className="cursor-pointer px-2 sm:px-5"
