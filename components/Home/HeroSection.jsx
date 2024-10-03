@@ -50,8 +50,8 @@ const HeroSection = () => {
                   y1="0%"
                   y2="0%"
                 >
-                  <stop offset="0%" stop-color="rgb(238, 69, 231)" />
-                  <stop offset="100%" stop-color="rgb(254, 170, 85)" />
+                  <stop offset="0%" stop-color="#d4145a" />
+                  <stop offset="100%" stop-color="#fbb03b" />
                 </linearGradient>
               </defs>
               <path stroke="url(#gradient1)" d="M7 8l-4 4l4 4" />

@@ -95,45 +95,21 @@ body {
   }
 }
 .text-gradient {
-  background: linear-gradient(
-    90deg,
-    #ee45e7 -118.07%,
-    #d23fe6 -72.92%,
-    #a434e4 -6.79%,
-    #feaa55 133.87%,
-    #feaa55 133.87%
-  );
+  background: linear-gradient(to right, #d4145a, #fbb03b);
   background-size: 100%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .expertise-text-gradient {
-  background: linear-gradient(
-    to right,
-    #ee45e7,
-    #d23fe6,
-    #a434e4,
-    #feaa55,
-    #feaa55,
-    #a434e4,
-    #d23fe6,
-    #ee45e7
-  );
+  background: linear-gradient(to right, #d4145a, #fbb03b);
   background-size: 100%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .bg-gradient {
-  background: linear-gradient(
-    90deg,
-    #ee45e7 -118.07%,
-    #d23fe6 -72.92%,
-    #a434e4 -6.79%,
-    #feaa55 133.87%,
-    #5a22e0 519.31%
-  );
+  background: linear-gradient(to right, #d4145a, #fbb03b);
 }
 
 .icon-animation {
