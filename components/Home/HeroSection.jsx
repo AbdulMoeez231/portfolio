@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <div className=" container flex items-end justify-between fade-in ">
+      <div className="container flex items-end justify-between fade-in md:mt-20">
         <div className="pop-up">
           <h1
             className="text-white text-3xl sm:text-4xl font-extrabold mt-5"

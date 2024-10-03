@@ -19,7 +19,7 @@ import Image from 'next/image'
 const Capabilities = () => {
     return (
         <>
-            <div className='pt-14 pb-5 md:pb-14' id='capabilities'>
+            <div className='pt-14 md:pt-5 pb-5 md:pb-14' id='capabilities'>
                 <h1 className='text-white font-bold text-base sm:text-xl md:text-2xl lg:text-3xl text-center'>
                     SKILLS
                 </h1>
