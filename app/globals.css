@@ -95,21 +95,21 @@ body {
   }
 }
 .text-gradient {
-  background: linear-gradient(to right, #d4145a, #fbb03b);
+  background: linear-gradient(to right, #dd2476, #ff512f);
   background-size: 100%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .expertise-text-gradient {
-  background: linear-gradient(to right, #d4145a, #fbb03b);
-  background-size: 100%;
+  background: linear-gradient(to right, #dd2476, #ff512f);
+  background-size: 70%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .bg-gradient {
-  background: linear-gradient(to right, #d4145a, #fbb03b);
+  background: linear-gradient(to right, #dd2476, #ff512f);
 }
 
 .icon-animation {
