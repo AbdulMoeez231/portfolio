@@ -5,6 +5,7 @@ import HeroSection from "./HeroSection";
 import Capabilities from "./Capabilities";
 import Expertise from "./Expertise";
 import Projects from "../Projects/Projects";
+import Contact from "./Contact";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,6 +23,7 @@ function Home() {
           <Capabilities />
           <Expertise />
           <Projects />
+          <Contact/>
         </div>
       ) : (
         <Loader />

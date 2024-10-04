@@ -103,7 +103,7 @@ body {
 }
 .expertise-text-gradient {
   background: linear-gradient(to right, #dd2476, #ff512f);
-  background-size: 70%;
+  background-size: 100%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

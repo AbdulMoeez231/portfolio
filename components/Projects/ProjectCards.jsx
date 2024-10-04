@@ -33,7 +33,7 @@ const imagineImagesGallary = [
 ];
 const furnotureImagesGallary = [
   "/assets/furniture/img-4.png",
-  "/assets/furniture/img-1.png",
+  "/assets/furniture/img-1.jpg",
   "/assets/furniture/img-3.png",
   "/assets/furniture/img-2.png",
   "/assets/furniture/img-5.png",

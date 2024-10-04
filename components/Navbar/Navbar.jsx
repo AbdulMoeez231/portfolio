@@ -65,7 +65,7 @@ const Navbar = () => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              Contact
+              <a href="#contact">Contact</a>
             </li>
             <div
               className={`absolute bg-gradient -bottom-1 w-full h-[2px] duration-200 z-20`}
