@@ -14,7 +14,7 @@ const Contact = () => {
           <h1 className="text-white font-bold text-base sm:text-xl text-center">
             WHAT I DO
           </h1>
-          <h1 className="text-center text-2xl lg:text-4xl expertise-text-gradient mt-10 uppercase font-extrabold leading-loose">
+          <h1 className="text-center text-2xl lg:text-4xl expertise-text-gradient mt-10 uppercase font-black leading-loose">
             Turning Aspirations into Achievements
           </h1>
         </div>

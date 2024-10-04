@@ -7,13 +7,13 @@ html {
 }
 
 @font-face {
-  font-family: "MyFont";
-  src: url("fonts/PlaywriteDEGrund-VariableFont_wght.ttf") format("truetype");
+  font-family: "Nunito";
+  src: url("fonts/Nunito-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 body {
-  font-family: "MyFont", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 .container {
   @apply mx-auto px-5 md:px-10 lg:px-12 xl:px-14 max-w-full lg:max-w-[1240px];
