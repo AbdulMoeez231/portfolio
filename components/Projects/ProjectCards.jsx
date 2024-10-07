@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import {
   IconBrandAws,
@@ -54,10 +54,6 @@ const squidImagesGallary = [
 ];
 const ProjectCards = () => {
   const [windowWidth, setWindowWidth] = useState();
-  const draggedRef = useRef(false);
-  const initialXRef = useRef(0);
-  const translateXRef = useRef(0);
-
   useEffect(() => {
     const onResize = () => {
       setWindowWidth(
@@ -72,7 +68,6 @@ const ProjectCards = () => {
       window.removeEventListener("resize", onResize, false);
     };
   }, []);
-
   const gridScroller = (gridElem, scroll, invert = false) => {
     const gridWrap = document.querySelector("#projects");
     const gridInner = gridElem;
@@ -111,33 +106,6 @@ const ProjectCards = () => {
     };
   }, [windowWidth]);
 
-  const handleMouseDown = (e, gridInner) => {
-    draggedRef.current = true;
-    initialXRef.current = e.clientX - translateXRef.current;
-  };
-
-  const handleMouseMove = (e, gridInner) => {
-    if (!draggedRef.current) return;
-
-    e.preventDefault();
-    const deltaX = e.clientX - initialXRef.current;
-    translateXRef.current = deltaX;
-
-    gsap.set(gridInner, {
-      x: deltaX,
-      ease: "none",
-      duration: 0,
-    });
-  };
-
-  const handleMouseUp = () => {
-    draggedRef.current = false;
-  };
-
-  const handleMouseLeave = () => {
-    draggedRef.current = false;
-  };
-
   return (
     <div className="mt-10 space-y-10">
       <Link href="http://skin-os.co/" target="_blank" className={"group"}>
@@ -167,14 +135,6 @@ const ProjectCards = () => {
           <section
             className="relative w-full cursor-pointer group overflow-hidden"
             id={`grid1`}
-            onMouseDown={(e) =>
-              handleMouseDown(e, e.currentTarget.querySelector(".grid-inner"))
-            }
-            onMouseMove={(e) =>
-              handleMouseMove(e, e.currentTarget.querySelector(".grid-inner"))
-            }
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseLeave}
           >
             <div
               className="grid-inner flex h-full flex-row-reverse gap-x-4 group-hover:opacity-80 transition-opacity"
