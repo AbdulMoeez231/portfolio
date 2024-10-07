@@ -29,9 +29,9 @@ const Contact = () => {
           </h2>
           <p className="text-white mt-3">
             To begin developing your next great idea,{" "}
-            <span className="relative">
-              <div className="absolute w-full h-[2px] bg-gradient left-0 -bottom-1"></div>{" "}
+            <span className="relative whitespace-nowrap">
               <a href="mailto:moeezbuttab231@gmail.com">send me an email</a>
+              <div className="absolute w-full h-[2px] bg-gradient left-0 -bottom-1"></div>{" "}
             </span>
           </p>
         </div>
