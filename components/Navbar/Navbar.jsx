@@ -8,6 +8,7 @@ const Navbar = () => {
   useEffect(() => {
     setHighlightStyle({
       width: "0px",
+      height: "0px",
       left: "0px",
       opacity: "0",
     });
@@ -25,6 +26,7 @@ const Navbar = () => {
 
     setHighlightStyle({
       width: `${width - 30}px`,
+      height: "3px",
       left: `${left + 17}px`,
       opacity: "1",
     });
@@ -68,7 +70,7 @@ const Navbar = () => {
               <a href="#contact">Contact</a>
             </li>
             <div
-              className={`absolute bg-gradient -bottom-1 w-full h-[2px] duration-200 z-20 max-sm:hidden`}
+              className={`absolute bg-gradient -bottom-1 duration-200 z-20 max-sm:hidden`}
               style={highlightStyle}
             />
           </ul>
