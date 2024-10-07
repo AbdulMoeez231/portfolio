@@ -12,7 +12,7 @@ function Home() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2600);
+    }, 2000);
   }, []);
 
   return (
@@ -23,10 +23,12 @@ function Home() {
           <Capabilities />
           <Expertise />
           <Projects />
-          <Contact/>
+          <Contact />
         </div>
       ) : (
-        <Loader />
+        <div className="bg-[#191A17] min-h-screen">
+          <Loader />
+        </div>
       )}
     </>
   );

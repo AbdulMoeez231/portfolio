@@ -68,7 +68,7 @@ const Navbar = () => {
               <a href="#contact">Contact</a>
             </li>
             <div
-              className={`absolute bg-gradient -bottom-1 w-full h-[2px] duration-200 z-20`}
+              className={`absolute bg-gradient -bottom-1 w-full h-[2px] duration-200 z-20 max-sm:hidden`}
               style={highlightStyle}
             />
           </ul>
