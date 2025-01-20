@@ -4,7 +4,7 @@ import { SplineScene } from "../ui/splite";
 
 const HeroSection = () => {
   return (
-    <div className="md:min-h-screen relative">
+    <div className="md:min-h-screen">
       <Navbar />
       <div className="container grid grid-cols-2 fade-in md:mt-20">
         <div className="pop-up xs:mt-10">
@@ -27,8 +27,8 @@ const HeroSection = () => {
             </span>
           </p>
         </div>
-        <div>
-          <div className="absolute bottom-0  w-max h-[150px] xs:h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[650px] overflow-hidden">
+        <div className="relative">
+          <div className="absolute -right-[10%] top-1/2 -translate-y-1/2 w-full h-[150px] xs:h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[650px] overflow-hidden">
             <SplineScene
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"
