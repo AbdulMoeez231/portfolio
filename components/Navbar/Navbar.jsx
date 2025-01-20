@@ -43,7 +43,7 @@ const Navbar = () => {
     <>
       <div className="container py-5 flex justify-between items-baseline text-white fade-in pop-up">
         <h1 className="text-2xl font-bold cursor-default">Moeez.</h1>
-        <div className="flex gap-3 items-center">
+        <div className="flex gap-3 sm:gap-4 items-center">
           <ul
             ref={ulRef}
             className="relative flex items-center font-medium  text-[10px] xs:text-sm md:text-base"
