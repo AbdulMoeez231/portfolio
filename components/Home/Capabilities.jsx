@@ -29,7 +29,13 @@ const Capabilities = () => {
               <Image
                 src={html}
                 alt="Html logo"
+                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px] ml-24"
+              />
+              <Image
+                src={mui}
+                alt="MUI logo"
                 className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                style={{ filter: "brightness(0) invert(1)" }}
               />
               <Image
                 src={css}
@@ -37,13 +43,31 @@ const Capabilities = () => {
                 className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
               />
               <Image
+                src={figma}
+                alt="Figma logo"
+                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
+              <Image
                 src={js}
                 alt="JS logo"
                 className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
               />
               <Image
+                src={shopify}
+                alt="Shopify logo"
+                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
+              <Image
                 src={react}
                 alt="React logo"
+                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
+              <Image
+                src={mongodb}
+                alt="MongoDB logo"
                 className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
@@ -54,8 +78,20 @@ const Capabilities = () => {
                 style={{ filter: "brightness(0) invert(1)" }}
               />
               <Image
+                src={expressjs}
+                alt="ExpressJS logo"
+                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
+              <Image
                 src={sass}
                 alt="SASS logo"
+                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
+              <Image
+                src={nodejs}
+                alt="NodeJS logo"
                 className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
@@ -70,26 +106,19 @@ const Capabilities = () => {
             <Marquee pauseOnHover direction="right">
               <div className="flex gap-x-14 md:gap-x-28">
                 <Image
-                  src={mui}
-                  alt="MUI logo"
+                  src={bootstrap}
+                  alt="Bootstrap logo"
+                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px] ml-24"
+                />
+                <Image
+                  src={nodejs}
+                  alt="NodeJS logo"
                   className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
                 <Image
-                  src={figma}
-                  alt="Figma logo"
-                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
-                  style={{ filter: "brightness(0) invert(1)" }}
-                />
-                <Image
-                  src={shopify}
-                  alt="Shopify logo"
-                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
-                  style={{ filter: "brightness(0) invert(1)" }}
-                />
-                <Image
-                  src={mongodb}
-                  alt="MongoDB logo"
+                  src={sass}
+                  alt="SASS logo"
                   className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
@@ -100,16 +129,55 @@ const Capabilities = () => {
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
                 <Image
-                  src={nodejs}
-                  alt="NodeJS logo"
+                  src={next}
+                  alt="NextJs logo"
                   className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
                 <Image
-                  src={gsap}
-                  alt="GSAP logo"
-                  className="w-[60px] md:w-[80px] h-[60px] md:h-[80px] mr-10"
+                  src={mongodb}
+                  alt="MongoDB logo"
+                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
                   style={{ filter: "brightness(0) invert(1)" }}
+                />
+                <Image
+                  src={react}
+                  alt="React logo"
+                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                  style={{ filter: "brightness(0) invert(1)" }}
+                />
+                <Image
+                  src={shopify}
+                  alt="Shopify logo"
+                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                  style={{ filter: "brightness(0) invert(1)" }}
+                />
+                <Image
+                  src={js}
+                  alt="JS logo"
+                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                />
+                <Image
+                  src={figma}
+                  alt="Figma logo"
+                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                  style={{ filter: "brightness(0) invert(1)" }}
+                />
+                <Image
+                  src={css}
+                  alt="css logo"
+                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                />
+                <Image
+                  src={mui}
+                  alt="MUI logo"
+                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                  style={{ filter: "brightness(0) invert(1)" }}
+                />
+                <Image
+                  src={html}
+                  alt="Html logo"
+                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px] ml-10"
                 />
               </div>
             </Marquee>
