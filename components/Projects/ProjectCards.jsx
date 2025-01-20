@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { gsap } from "gsap";
 import {
   IconBrandAws,
   IconBrandJavascript,
@@ -85,10 +84,8 @@ const ProjectCards = () => {
       x = progress * gridInnerRect?.width * 0.5;
     }
     const imagesCard = gridInner?.querySelectorAll("img");
-    gsap.to(imagesCard, {
-      x: invert ? -x : x,
-      ease: "none",
-      duration: 0,
+    imagesCard.forEach((img) => {
+      img.style.transform = `translateX(${invert ? -x : x}px)`;
     });
   };
 
