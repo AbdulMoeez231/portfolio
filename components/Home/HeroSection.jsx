@@ -28,7 +28,7 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="relative">
-          <div className="absolute -right-[10%] top-1/2 -translate-y-1/2 w-full h-[150px] xs:h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[650px] overflow-hidden">
+          <div className="absolute !z-30 -right-[10%] top-[60%] -translate-y-1/2 w-full h-[150px] xs:h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] overflow-hidden">
             <SplineScene
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"
