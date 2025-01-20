@@ -9,7 +9,7 @@ import React from "react";
 const Contact = () => {
   return (
     <>
-      <div className="bg-[#1E1F1C]">
+      <div className="bg-[#000000]">
         <div className="container py-10 md:py-20">
           <h1 className="text-white font-bold text-base sm:text-xl text-center">
             WHAT I DO

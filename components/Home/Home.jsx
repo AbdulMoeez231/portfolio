@@ -18,7 +18,7 @@ function Home() {
   return (
     <>
       {!isLoading ? (
-        <div className="bg-[#191A17] min-h-screen">
+        <div className="bg-[#000000] min-h-screen">
           <HeroSection />
           <Capabilities />
           <Expertise />
@@ -26,7 +26,7 @@ function Home() {
           <Contact />
         </div>
       ) : (
-        <div className="bg-[#191A17] min-h-screen">
+        <div className="bg-[#000000] min-h-screen">
           <Loader />
         </div>
       )}
