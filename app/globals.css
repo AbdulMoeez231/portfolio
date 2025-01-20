@@ -16,7 +16,7 @@ body {
   font-family: "Nunito", sans-serif;
 }
 .container {
-  @apply mx-auto px-5 md:px-10 lg:px-12 xl:px-14 max-w-full lg:max-w-[1240px];
+  @apply mx-auto px-5 md:px-10 lg:px-12 xl:px-14 max-w-full lg:max-w-[1340px];
 }
 .loader {
   height: 3px;
@@ -93,6 +93,9 @@ body {
   100% {
     transform: translateY(0px);
   }
+}
+.gradient {
+  background: linear-gradient(to right, #dd2476, #ff512f);
 }
 .text-gradient {
   background: linear-gradient(to right, #dd2476, #ff512f);

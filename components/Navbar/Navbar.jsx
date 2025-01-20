@@ -43,27 +43,34 @@ const Navbar = () => {
     <>
       <div className="container py-5 flex justify-between items-baseline text-white fade-in pop-up">
         <h1 className="text-2xl font-bold cursor-default">Moeez.</h1>
-        <div>
+        <div className="flex gap-3 items-center">
           <ul
             ref={ulRef}
-            className="relative flex items-center font-medium  text-[10px] xs:text-sm sm:text-base"
+            className="relative flex items-center font-medium  text-[10px] xs:text-sm md:text-base"
           >
             <li
-              className="cursor-pointer px-2 sm:px-5"
+              className="cursor-pointer px-2 md:px-5"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
               <a href="#projects">Projects</a>
             </li>
             <li
-              className="cursor-pointer px-2 sm:px-5"
+              className="cursor-pointer px-2 md:px-5 max-sm:hidden"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
               <a href="#capabilities">Capabilities</a>
             </li>
             <li
-              className="cursor-pointer px-2 sm:px-5"
+              className="cursor-pointer px-2 md:px-5 max-sm:hidden"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a href="#expertise">Expertise</a>
+            </li>
+            <li
+              className="cursor-pointer px-2 md:px-5"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
@@ -74,6 +81,7 @@ const Navbar = () => {
               style={highlightStyle}
             />
           </ul>
+          <a href="/moeez-cv.pdf" download className="gradient px-2 py-0.5 rounded-sm font-medium text-[10px] xs:text-sm md:text-base whitespace-nowrap active:scale-75 duration-200">Download CV</a>
         </div>
       </div>
     </>

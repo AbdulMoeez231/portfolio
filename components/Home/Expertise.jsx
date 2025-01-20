@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const Expertise = () => {
   return (
-    <div className="py-5 sm:pb-10 md:pb-14">
+    <div className="py-5 sm:pb-10 md:pb-14" id="expertise">
       <h1 className="text-white font-bold text-base sm:text-xl md:text-2xl lg:text-3xl text-center">
         MY EXPERTISE
       </h1>
