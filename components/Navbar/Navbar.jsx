@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="container py-5 flex justify-between items-baseline text-white fade-in pop-up">
+      <div className="container max-md:pb-5 pt-5 md:pt-10 flex justify-between items-baseline text-white fade-in pop-up">
         <h1 className="text-2xl font-bold cursor-default">Moeez.</h1>
         <div className="flex gap-3 sm:gap-4 items-center">
           <ul

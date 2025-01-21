@@ -8,8 +8,8 @@ const HeroSection = () => {
       <Navbar />
       <div className="container grid grid-cols-2 fade-in md:mt-20">
         <div className="pop-up xs:mt-10">
-          <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold mt-5 leading-relaxed !md:leading-[55px]">
-            Hi, <br className="max-sm:hidden" /> I'm{" "}
+          <h1 className="text-white text-base sm:text-2xl md:text-3xl lg:text-4xl font-extrabold mt-5 leading-relaxed md:!leading-[55px]">
+            Hi, I'm{" "}
             <span className="text-gradient">Abdul Moeez.</span> <br />
             Full stack developer based in <br /> Lahore, Pakistan.
           </h1>
@@ -21,9 +21,9 @@ const HeroSection = () => {
           </p>
           <p className="mt-5 text-white text-xs sm:text-base">
             Get in touch{" "}
-            <span className="relative">
-              <div className="absolute w-full h-[2px] bg-gradient left-0 -bottom-1"></div>{" "}
+            <span className="w-full relative">
               <a href="mailto:moeezbuttab231@gmail.com">hello@abdulmoeez.me</a>
+              <div className="absolute w-full h-[2px] bg-gradient left-0 -bottom-1"></div>{" "}
             </span>
           </p>
         </div>
