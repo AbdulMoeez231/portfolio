@@ -20,7 +20,7 @@ body {
 }
 .loader {
   height: 3px;
-  background-color: #252525;
+  background-color: #000000;
   animation: loader 3300ms;
 }
 @keyframes loader {

@@ -8,7 +8,7 @@ const HeroSection = () => {
       <Navbar />
       <div className="container grid grid-cols-2 fade-in md:mt-20">
         <div className="pop-up xs:mt-10">
-          <h1 className="text-white text-base sm:text-2xl md:text-3xl lg:text-4xl font-extrabold mt-5 leading-relaxed !md:leading-[55px]">
+          <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold mt-5 leading-relaxed !md:leading-[55px]">
             Hi, <br className="max-sm:hidden" /> I'm{" "}
             <span className="text-gradient">Abdul Moeez.</span> <br />
             Full stack developer based in <br /> Lahore, Pakistan.
@@ -28,7 +28,7 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="relative">
-          <div className="absolute !z-30 -right-[10%] top-[60%] -translate-y-1/2 w-full h-[150px] xs:h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] overflow-hidden">
+          <div className="absolute !z-30 -right-[10%] top-[60%] -translate-y-1/2 w-full h-[180px] xs:h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] overflow-hidden">
             <SplineScene
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"

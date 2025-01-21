@@ -13,171 +13,170 @@ import shopify from "@/public/assets/skills/shopify.svg";
 import mongodb from "@/public/assets/skills/mongodb.svg";
 import expressjs from "@/public/assets/skills/expressjs.svg";
 import nodejs from "@/public/assets/skills/nodejs.svg";
-import gsap from "@/public/assets/skills/gsap.svg";
 import Image from "next/image";
 
 const Capabilities = () => {
   return (
     <>
-      <div className="pt-14 md:pt-5 pb-5 md:pb-14" id="capabilities">
+      <div className="pt-10 md:pt-5 pb-0" id="capabilities">
         <h1 className="text-white font-bold text-base sm:text-xl md:text-2xl lg:text-3xl text-center">
           SKILLS
         </h1>
-        <div className="py-14 md:py-20">
+        <div className="py-5 sm:py-14 md:py-20 md:mt-5">
           <Marquee pauseOnHover>
             <div className="flex gap-x-14 md:gap-x-28">
               <Image
                 src={html}
                 alt="Html logo"
-                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px] ml-24"
+                className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px] md:ml-24"
               />
               <Image
                 src={mui}
                 alt="MUI logo"
-                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
               <Image
                 src={css}
                 alt="css logo"
-                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
               />
               <Image
                 src={figma}
                 alt="Figma logo"
-                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
               <Image
                 src={js}
                 alt="JS logo"
-                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
               />
               <Image
                 src={shopify}
                 alt="Shopify logo"
-                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
               <Image
                 src={react}
                 alt="React logo"
-                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
               <Image
                 src={mongodb}
                 alt="MongoDB logo"
-                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
               <Image
                 src={next}
                 alt="NextJs logo"
-                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
               <Image
                 src={expressjs}
                 alt="ExpressJS logo"
-                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
               <Image
                 src={sass}
                 alt="SASS logo"
-                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
               <Image
                 src={nodejs}
                 alt="NodeJS logo"
-                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
               <Image
                 src={bootstrap}
                 alt="Bootstrap logo"
-                className="w-[50px] md:w-[80px] h-[50px] md:h-[80px] mr-10"
+                className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px] mr-10"
               />
             </div>
           </Marquee>
-          <div className="mt-14 md:mt-20">
+          <div className="py-5 sm:py-14 md:py-20">
             <Marquee pauseOnHover direction="right">
               <div className="flex gap-x-14 md:gap-x-28">
                 <Image
                   src={bootstrap}
                   alt="Bootstrap logo"
-                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px] ml-24"
+                  className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px] ml-10 md:ml-24"
                 />
                 <Image
                   src={nodejs}
                   alt="NodeJS logo"
-                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                  className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
                 <Image
                   src={sass}
                   alt="SASS logo"
-                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                  className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
                 <Image
                   src={expressjs}
                   alt="ExpressJS logo"
-                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                  className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
                 <Image
                   src={next}
                   alt="NextJs logo"
-                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                  className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
                 <Image
                   src={mongodb}
                   alt="MongoDB logo"
-                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                  className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
                 <Image
                   src={react}
                   alt="React logo"
-                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                  className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
                 <Image
                   src={shopify}
                   alt="Shopify logo"
-                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                  className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
                 <Image
                   src={js}
                   alt="JS logo"
-                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                  className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                 />
                 <Image
                   src={figma}
                   alt="Figma logo"
-                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                  className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
                 <Image
                   src={css}
                   alt="css logo"
-                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                  className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                 />
                 <Image
                   src={mui}
                   alt="MUI logo"
-                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px]"
+                  className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                   style={{ filter: "brightness(0) invert(1)" }}
                 />
                 <Image
                   src={html}
                   alt="Html logo"
-                  className="w-[50px] md:w-[80px] h-[50px] md:h-[80px] ml-10"
+                  className="w-[35px] sm:w-[50px] md:w-[80px] h-[35px] sm:h-[50px] md:h-[80px]"
                 />
               </div>
             </Marquee>

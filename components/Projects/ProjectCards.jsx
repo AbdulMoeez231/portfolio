@@ -14,6 +14,7 @@ import {
   IconBrandStripe,
   IconBrandTailwind,
 } from "@tabler/icons-react";
+import { ExternalLink } from "lucide-react";
 
 function clamp(min, input, max) {
   return Math.max(min, Math.min(input, max));
@@ -105,9 +106,12 @@ const ProjectCards = () => {
 
   return (
     <div className="mt-10 space-y-10">
-      <Link href="http://skin-os.co/" target="_blank" className={"group"}>
+      <div className={"group"}>
         <div className="mt-5 relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
-          <div className="ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 p-5 border border-white rounded md:max-w-md text-white">
+          <div className="relative ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 p-5 border border-white rounded-md md:max-w-md text-white">
+            <Link href="http://skin-os.com/" target="_blank" className="absolute top-5 right-5">
+              <ExternalLink size={20} />
+            </Link>
             <h4 className="text-xl font-bold font-heading text-gradient-skinos">
               Skin OS
             </h4>
@@ -155,14 +159,13 @@ const ProjectCards = () => {
             </div>
           </section>
         </div>
-      </Link>
-      <Link
-        href="https://www.careerjustimagine.com/"
-        target="_blank"
-        className={"group mt-5"}
-      >
+      </div>
+      <div className={"group mt-5"}>
         <div className="relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
-          <div className="ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 p-5 border border-white rounded md:max-w-md text-white">
+          <div className="min-h-[295px] relative ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 p-5 border border-white rounded-md md:max-w-md text-white">
+            <Link href="https://www.careerjustimagine.com/" target="_blank" className="absolute top-5 right-5">
+              <ExternalLink size={20} />
+            </Link>
             <h4 className="text-xl font-bold font-heading text-gradient-green">
               Just imagine careers
             </h4>
@@ -210,10 +213,13 @@ const ProjectCards = () => {
             </div>
           </section>
         </div>
-      </Link>
-      <Link href="http://gldreamhome.com/" target="_blank" className={"group"}>
+      </div>
+      <div className={"group"}>
         <div className="mt-5 relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
-          <div className="ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 p-5 border border-white rounded md:max-w-md text-white">
+          <div className="relative  ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 p-5 border border-white rounded-md md:max-w-md text-white">
+            <Link href="http://gldreamhome.com/" target="_blank" className="absolute top-5 right-5">
+              <ExternalLink size={20} />
+            </Link>
             <h4 className="text-xl font-bold font-heading text-gradient-orange">
               Guideline dream home
             </h4>
@@ -260,10 +266,13 @@ const ProjectCards = () => {
             </div>
           </section>
         </div>
-      </Link>
-      <Link href="https://squid.academy/" target="_blank" className={"group"}>
+      </div>
+      <div className={"group"}>
         <div className="mt-5 relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
-          <div className="ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 p-5 border border-white rounded md:max-w-md text-white">
+          <div className="relative ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 p-5 border border-white rounded-md md:max-w-md text-white">
+            <Link href="https://squid.academy/" target="_blank" className="absolute top-5 right-5">
+              <ExternalLink size={20} />
+            </Link>
             <h4 className="text-xl font-bold font-heading text-gradient-squid">
               Squid Academy
             </h4>
@@ -310,7 +319,7 @@ const ProjectCards = () => {
             </div>
           </section>
         </div>
-      </Link>
+      </div>
     </div>
   );
 };
