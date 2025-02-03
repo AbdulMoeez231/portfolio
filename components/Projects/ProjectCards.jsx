@@ -5,10 +5,13 @@ import React, { useEffect, useState, useRef } from "react";
 import { ExternalLink } from "lucide-react";
 import SpotlightCard from "../Global/SpotlightCard";
 import { projects } from "./data";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+function clamp(min, input, max) {
+  return Math.max(min, Math.min(input, max));
+}
+function mapRange(in_min, in_max, input, out_min, out_max) {
+  return ((input - in_min) * (out_max - out_min)) / (in_max - out_min) + out_min;
+}
 
 const ProjectCards = () => {
   const [windowWidth, setWindowWidth] = useState();
@@ -38,23 +41,41 @@ const ProjectCards = () => {
     });
   }, [windowWidth]);
 
-  useEffect(() => {
-    const sections = document.querySelectorAll('[id^="grid"] .grid-inner');
-    sections.forEach((section, idx) => {
-      const images = section.querySelectorAll("img");
-      gsap.to(images, {
-        xPercent: -100 * (images.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: "top center",
-          end: "bottom center",
-          scrub: true,
-          pin: true,
-          snap: 1 / (images.length - 1),
-        },
-      });
+  const gridScroller = (gridElem, scroll, invert = false) => {
+    const gridWrap = document.querySelector("#projects");
+    const gridInner = gridElem;
+    const gridWrapRect = gridWrap?.getBoundingClientRect();
+    const gridInnerRect = gridInner?.getBoundingClientRect();
+
+    const start = gridWrapRect?.top + 400;
+    const end = gridWrapRect?.top + 1200 + gridWrapRect?.height + 2000;
+    let progress = mapRange(start, end, scroll, 0, 1);
+    progress = clamp(0, progress, 1);
+    let x;
+    if (windowWidth < 768) {
+      x = progress * gridInnerRect?.width * 2.5;
+    } else {
+      x = progress * gridInnerRect?.width * 0.5;
+    }
+    const imagesCard = gridInner?.querySelectorAll("img");
+    imagesCard.forEach((img) => {
+      img.style.transition = "transform 0.1s linear";
+      img.style.transform = `translateX(${invert ? -x : x}px)`;
     });
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('[id^="grid"] .grid-inner');
+      sections.forEach((section) => {
+        gridScroller(section, window.scrollY);
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [windowWidth]);
 
   return (

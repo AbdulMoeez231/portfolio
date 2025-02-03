@@ -7,7 +7,9 @@ const Projects = () => {
       <h1 className="text-white font-bold text-base sm:text-xl md:text-2xl lg:text-3xl text-center">
         SOME PROJECTS
       </h1>
-      <p className="text-neutral-300 text-center mt-2">Out of many</p>
+      <div className="flex items-center justify-center">
+      <p className="shiny-text mt-2 text-lg">Out of many</p>
+      </div>
       <div className="mt-5">
         <ProjectCards />
       </div>

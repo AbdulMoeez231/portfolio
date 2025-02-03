@@ -1,4 +1,5 @@
 import React from "react";
+import GradientText from "./GradientText"; // Import GradientText component
 
 const Expertise = () => {
   return (
@@ -15,8 +16,14 @@ const Expertise = () => {
           "UI DESIGN",
           "WEB ANIMATIONS",
         ].map((text, index) => (
-          <div key={index} className="border-b border-neutral-500 pb-3 md:pb-5">
-            <h1 className="container expertise-text-gradient">{text}</h1>
+          <div key={index} className="border-b border-neutral-500 pb-3 md:pb-5 text-left">
+            <GradientText
+              colors={["#dd2476", "#ff512f", "#dd2476", "#ff512f", "#dd2476", "#ff512f"]}
+              animationSpeed={5}
+              className="container expertise-text-gradient"
+            >
+              {text}
+            </GradientText>
           </div>
         ))}
       </div>
