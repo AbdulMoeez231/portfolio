@@ -16,7 +16,7 @@ body {
   font-family: "Nunito", sans-serif;
 }
 .container {
-  @apply mx-auto px-5 md:px-10 lg:px-12 xl:px-14 max-w-full lg:max-w-[1340px];
+  @apply mx-auto px-5 md:px-10 lg:px-12 xl:px-14 max-w-full lg:max-w-[1440px];
 }
 .loader {
   height: 3px;

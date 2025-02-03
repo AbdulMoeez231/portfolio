@@ -15,6 +15,7 @@ import {
   IconBrandTailwind,
 } from "@tabler/icons-react";
 import { ExternalLink } from "lucide-react";
+import SpotlightCard from "../Global/SpotlightCard";
 
 function clamp(min, input, max) {
   return Math.max(min, Math.min(input, max));
@@ -108,37 +109,41 @@ const ProjectCards = () => {
     <div className="mt-10 space-y-10">
       <div className={"group"}>
         <div className="mt-5 relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
-          <div className="relative ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 p-5 border border-white rounded-md md:max-w-md text-white">
-            <Link href="http://skin-os.com/" target="_blank" className="absolute top-5 right-5">
-              <ExternalLink size={20} />
-            </Link>
-            <h4 className="text-xl font-bold font-heading text-gradient-skinos">
-              Skin OS
-            </h4>
-            <p className="text-sm opacity-70 uppercase mt-3">2250 AI</p>
-            <div className="mt-4 mb-7 line-clamp-4">
-              A SaaS platform for beauty businesses utilizing AI-driven skin
-              data collection, progress tracking, personalized recommendations,
-              and CRM integration to enhance client care.
-            </div>
 
-            <div>
-              <p className="text-sm opacity-80 mb-3">Technologies:</p>
-              <div className="flex items-center gap-x-5 text-white mt-5">
-                <IconBrandPhp />
-                <IconBrandLaravel />
-                <IconBrandReact />
-                <IconBrandTailwind />
-                <span className="text-sm text-white font-bold">AI</span>
+          <div className="relative ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 border border-white rounded-md md:max-w-md text-white">
+            <SpotlightCard className="custom-spotlight-card w-full">
+              <Link href="http://skin-os.com/" target="_blank" className="absolute top-5 right-5">
+                <ExternalLink size={20} />
+              </Link>
+              <h4 className="text-xl font-bold font-heading text-gradient-skinos">
+                Skin OS
+              </h4>
+              <p className="text-sm opacity-70 uppercase mt-3">2250 AI</p>
+              <div className="mt-4 mb-7 line-clamp-4">
+                A SaaS platform for beauty businesses utilizing AI-driven skin
+                data collection, progress tracking, personalized recommendations,
+                and CRM integration to enhance client care.
               </div>
-            </div>
+
+              <div>
+                <p className="text-sm opacity-80 mb-3">Technologies:</p>
+                <div className="flex items-center gap-x-5 text-white mt-5">
+                  <IconBrandPhp />
+                  <IconBrandLaravel />
+                  <IconBrandReact />
+                  <IconBrandTailwind />
+                  <span className="text-sm text-white font-bold">AI</span>
+                </div>
+              </div>
+            </SpotlightCard>
           </div>
+
           <section
             className="relative w-full cursor-pointer group overflow-hidden"
             id={`grid1`}
           >
             <div
-              className="grid-inner flex h-full flex-row-reverse gap-x-4 group-hover:opacity-80 transition-opacity"
+              className="grid-inner flex h-full flex-row-reverse gap-x-4 "
               data-scroll
               data-scroll-speed="-6"
               data-scroll-direction="horizontal"
@@ -162,37 +167,40 @@ const ProjectCards = () => {
       </div>
       <div className={"group mt-5"}>
         <div className="relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
-          <div className="min-h-[295px] relative ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 p-5 border border-white rounded-md md:max-w-md text-white">
-            <Link href="https://www.careerjustimagine.com/" target="_blank" className="absolute top-5 right-5">
-              <ExternalLink size={20} />
-            </Link>
-            <h4 className="text-xl font-bold font-heading text-gradient-green">
-              Just imagine careers
-            </h4>
-            <p className="text-sm opacity-70 uppercase mt-3">IMAGINE</p>
-            <div className="mt-4 mb-7 line-clamp-4">
-              A platform for searching full-time jobs and freelance projects, or
-              creating recruiter accounts. Includes identity card verification
-              for freelancers to ensure trust.
-            </div>
-
-            <div>
-              <p className="text-sm opacity-80 mb-3">Technologies:</p>
-              <div className="flex gap-x-5 text-white mt-5">
-                <IconBrandMongodb />
-                <IconBrandNodejs />
-                <IconBrandReact />
-                <IconBrandTailwind />
-                <IconBrandAws />
+          <div className="min-h-[295px] relative ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 border border-white rounded-md md:max-w-md text-white">
+            <SpotlightCard className="custom-spotlight-card">
+              <Link href="https://www.careerjustimagine.com/" target="_blank" className="absolute top-5 right-5">
+                <ExternalLink size={20} />
+              </Link>
+              <h4 className="text-xl font-bold font-heading text-gradient-green">
+                Just imagine careers
+              </h4>
+              <p className="text-sm opacity-70 uppercase mt-3">IMAGINE</p>
+              <div className="mt-4 mb-7 line-clamp-4">
+                A platform for searching full-time jobs and freelance projects, or
+                creating recruiter accounts. Includes identity card verification
+                for freelancers to ensure trust.
               </div>
-            </div>
+
+              <div>
+                <p className="text-sm opacity-80 mb-3">Technologies:</p>
+                <div className="flex gap-x-5 text-white mt-5">
+                  <IconBrandMongodb />
+                  <IconBrandNodejs />
+                  <IconBrandReact />
+                  <IconBrandTailwind />
+                  <IconBrandAws />
+                </div>
+              </div>
+            </SpotlightCard>
           </div>
+
           <section
             className="relative w-full cursor-pointer group overflow-hidden"
             id={`grid1`}
           >
             <div
-              className="grid-inner flex h-full flex-row-reverse gap-x-4 group-hover:opacity-80 transition-opacity"
+              className="grid-inner flex h-full flex-row-reverse gap-x-4 "
               data-scroll
               data-scroll-speed="-6"
               data-scroll-direction="horizontal"
@@ -216,36 +224,39 @@ const ProjectCards = () => {
       </div>
       <div className={"group"}>
         <div className="mt-5 relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
-          <div className="relative  ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 p-5 border border-white rounded-md md:max-w-md text-white">
-            <Link href="http://gldreamhome.com/" target="_blank" className="absolute top-5 right-5">
-              <ExternalLink size={20} />
-            </Link>
-            <h4 className="text-xl font-bold font-heading text-gradient-orange">
-              Guideline dream home
-            </h4>
-            <p className="text-sm opacity-70 uppercase mt-3">FURNITURE</p>
-            <div className="mt-4 mb-7 line-clamp-4">
-              A furniture store with Stripe integration for secure payments and
-              advanced filtering options for easy product discovery.
-            </div>
+          <div className="relative  ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 border border-white rounded-md md:max-w-md text-white">
+            <SpotlightCard className="custom-spotlight-card w-full">
 
-            <div>
-              <p className="text-sm opacity-80 mb-3">Technologies:</p>
-              <div className="flex gap-x-5 text-white mt-5">
-                <IconBrandMongodb />
-                <IconBrandNodejs />
-                <IconBrandReact />
-                <IconBrandStripe />
-                <IconBrandTailwind />
+              <Link href="http://gldreamhome.com/" target="_blank" className="absolute top-5 right-5">
+                <ExternalLink size={20} />
+              </Link>
+              <h4 className="text-xl font-bold font-heading text-gradient-orange">
+                Guideline dream home
+              </h4>
+              <p className="text-sm opacity-70 uppercase mt-3">FURNITURE</p>
+              <div className="mt-4 mb-7 line-clamp-4">
+                A furniture store with Stripe integration for secure payments and
+                advanced filtering options for easy product discovery.
               </div>
-            </div>
+
+              <div>
+                <p className="text-sm opacity-80 mb-3">Technologies:</p>
+                <div className="flex gap-x-5 text-white mt-5">
+                  <IconBrandMongodb />
+                  <IconBrandNodejs />
+                  <IconBrandReact />
+                  <IconBrandStripe />
+                  <IconBrandTailwind />
+                </div>
+              </div>
+            </SpotlightCard>
           </div>
           <section
             className="relative w-full cursor-pointer group overflow-hidden"
             id={`grid1`}
           >
             <div
-              className="grid-inner flex h-full flex-row-reverse gap-x-4 group-hover:opacity-80 transition-opacity"
+              className="grid-inner flex h-full flex-row-reverse gap-x-4 "
               data-scroll
               data-scroll-speed="-6"
               data-scroll-direction="horizontal"
@@ -269,36 +280,38 @@ const ProjectCards = () => {
       </div>
       <div className={"group"}>
         <div className="mt-5 relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
-          <div className="relative ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 p-5 border border-white rounded-md md:max-w-md text-white">
-            <Link href="https://squid.academy/" target="_blank" className="absolute top-5 right-5">
-              <ExternalLink size={20} />
-            </Link>
-            <h4 className="text-xl font-bold font-heading text-gradient-squid">
-              Squid Academy
-            </h4>
-            <p className="text-sm opacity-70 uppercase mt-3">SQUID</p>
-            <div className="mt-4 mb-7 line-clamp-4">
-              A project built in Next.js with server-side rendering, integrated
-              CMS for blogs, and an exceptional user interface.
-            </div>
-
-            <div>
-              <p className="text-sm opacity-80 mb-3">Technologies:</p>
-              <div className="flex gap-x-5 text-white mt-5">
-                <IconBrandMongodb />
-                <IconBrandJavascript />
-                <IconBrandNextjs />
-                <IconBrandTailwind />
-                <IconBrandAws />
+          <div className="relative ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 border border-white rounded-md md:max-w-md text-white">
+            <SpotlightCard className="custom-spotlight-card w-full">
+              <Link href="https://squid.academy/" target="_blank" className="absolute top-5 right-5">
+                <ExternalLink size={20} />
+              </Link>
+              <h4 className="text-xl font-bold font-heading text-gradient-squid">
+                Squid Academy
+              </h4>
+              <p className="text-sm opacity-70 uppercase mt-3">SQUID</p>
+              <div className="mt-4 mb-7 line-clamp-4">
+                A project built in Next.js with server-side rendering, integrated
+                CMS for blogs, and an exceptional user interface.
               </div>
-            </div>
+
+              <div>
+                <p className="text-sm opacity-80 mb-3">Technologies:</p>
+                <div className="flex gap-x-5 text-white mt-5">
+                  <IconBrandMongodb />
+                  <IconBrandJavascript />
+                  <IconBrandNextjs />
+                  <IconBrandTailwind />
+                  <IconBrandAws />
+                </div>
+              </div>
+            </SpotlightCard>
           </div>
           <section
             className="relative w-full cursor-pointer group overflow-hidden"
             id={`grid1`}
           >
             <div
-              className="grid-inner flex h-full flex-row-reverse gap-x-4 group-hover:opacity-80 transition-opacity"
+              className="grid-inner flex h-full flex-row-reverse gap-x-4 "
               data-scroll
               data-scroll-speed="-6"
               data-scroll-direction="horizontal"
