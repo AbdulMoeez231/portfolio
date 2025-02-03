@@ -1,60 +1,22 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import {
-  IconBrandAws,
-  IconBrandJavascript,
-  IconBrandLaravel,
-  IconBrandMongodb,
-  IconBrandNextjs,
-  IconBrandNodejs,
-  IconBrandPhp,
-  IconBrandReact,
-  IconBrandStripe,
-  IconBrandTailwind,
-} from "@tabler/icons-react";
+import React, { useEffect, useState, useRef } from "react";
 import { ExternalLink } from "lucide-react";
 import SpotlightCard from "../Global/SpotlightCard";
+import { projects } from "./data";
 
 function clamp(min, input, max) {
   return Math.max(min, Math.min(input, max));
 }
-
 function mapRange(in_min, in_max, input, out_min, out_max) {
-  return ((input - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+  return ((input - in_min) * (out_max - out_min)) / (in_max - out_min) + out_min;
 }
 
-const imagineImagesGallary = [
-  "/assets/imagine/img-2.png",
-  "/assets/imagine/img-1.png",
-  "/assets/imagine/img-3.png",
-  "/assets/imagine/img-4.png",
-  "/assets/imagine/img-5.png",
-];
-const furnotureImagesGallary = [
-  "/assets/furniture/img-4.png",
-  "/assets/furniture/img-1.jpg",
-  "/assets/furniture/img-3.png",
-  "/assets/furniture/img-2.png",
-  "/assets/furniture/img-5.png",
-];
-const skinOsImagesGallary = [
-  "/assets/skin-os/img-4.png",
-  "/assets/skin-os/img-1.png",
-  "/assets/skin-os/img-3.png",
-  "/assets/skin-os/img-2.png",
-  "/assets/skin-os/img-5.png",
-];
-const squidImagesGallary = [
-  "/assets/squid-academy/img-4.png",
-  "/assets/squid-academy/img-3.png",
-  "/assets/squid-academy/img-1.png",
-  "/assets/squid-academy/img-2.png",
-  "/assets/squid-academy/img-5.png",
-];
 const ProjectCards = () => {
   const [windowWidth, setWindowWidth] = useState();
+  const cardRefs = useRef([]);
+
   useEffect(() => {
     const onResize = () => {
       setWindowWidth(
@@ -69,6 +31,16 @@ const ProjectCards = () => {
       window.removeEventListener("resize", onResize, false);
     };
   }, []);
+
+  useEffect(() => {
+    cardRefs.current.forEach((card, idx) => {
+      const section = document.querySelector(`#grid${idx + 1}`);
+      if (section) {
+        card.style.height = `${section.offsetHeight}px`;
+      }
+    });
+  }, [windowWidth]);
+
   const gridScroller = (gridElem, scroll, invert = false) => {
     const gridWrap = document.querySelector("#projects");
     const gridInner = gridElem;
@@ -87,6 +59,7 @@ const ProjectCards = () => {
     }
     const imagesCard = gridInner?.querySelectorAll("img");
     imagesCard.forEach((img) => {
+      img.style.transition = "transform 0.1s linear";
       img.style.transform = `translateX(${invert ? -x : x}px)`;
     });
   };
@@ -107,106 +80,45 @@ const ProjectCards = () => {
 
   return (
     <div className="mt-10 space-y-10">
-      <div className={"group"}>
-        <div className="mt-5 relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
-
-          <div className="relative ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 border border-white rounded-md md:max-w-md text-white">
-            <SpotlightCard className="custom-spotlight-card w-full">
-              <Link href="http://skin-os.com/" target="_blank" className="absolute top-5 right-5">
-                <ExternalLink size={20} />
-              </Link>
-              <h4 className="text-xl font-bold font-heading text-gradient-skinos">
-                Skin OS
-              </h4>
-              <p className="text-sm opacity-70 uppercase mt-3">2250 AI</p>
-              <div className="mt-4 mb-7 line-clamp-4">
-                A SaaS platform for beauty businesses utilizing AI-driven skin
-                data collection, progress tracking, personalized recommendations,
-                and CRM integration to enhance client care.
-              </div>
-
-              <div>
-                <p className="text-sm opacity-80 mb-3">Technologies:</p>
-                <div className="flex items-center gap-x-5 text-white mt-5">
-                  <IconBrandPhp />
-                  <IconBrandLaravel />
-                  <IconBrandReact />
-                  <IconBrandTailwind />
-                  <span className="text-sm text-white font-bold">AI</span>
-                </div>
-              </div>
-            </SpotlightCard>
-          </div>
-
-          <section
-            className="relative w-full cursor-pointer group overflow-hidden"
-            id={`grid1`}
+      {projects.map((project, idx) => (
+        <div className="group" key={idx}>
+          <div
+            className="mt-5 relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5"
           >
             <div
-              className="grid-inner flex h-full flex-row-reverse gap-x-4 "
-              data-scroll
-              data-scroll-speed="-6"
-              data-scroll-direction="horizontal"
+              className="relative ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 border border-white rounded-md md:max-w-md text-white"
+              ref={(el) => (cardRefs.current[idx] = el)}
             >
-              {skinOsImagesGallary.map((image, imgIdx) => {
-                return (
-                  <div className="min-w-[370px] min-h-[305px]" key={imgIdx}>
-                    <Image
-                      src={image}
-                      width={1500}
-                      height={600}
-                      alt="Image"
-                      className="w-full h-full object-cover rounded-md "
-                    />
+              <SpotlightCard className="custom-spotlight-card w-full">
+                <Link href={project.link} target="_blank" className="absolute top-5 right-5">
+                  <ExternalLink size={20} />
+                </Link>
+                <h4 className={`text-xl font-bold font-heading ${project.gradientClass}`}>
+                  {project.title}
+                </h4>
+                <p className="text-sm opacity-70 uppercase mt-3">{project.category}</p>
+                <div className="mt-4 mb-7 line-clamp-4">
+                  {project.description}
+                </div>
+                <div>
+                  <p className="text-sm opacity-80 mb-3">Technologies:</p>
+                  <div className="flex items-center gap-x-5 text-white mt-5">
+                    {project.technologies}
                   </div>
-                );
-              })}
-            </div>
-          </section>
-        </div>
-      </div>
-      <div className={"group mt-5"}>
-        <div className="relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
-          <div className="min-h-[295px] relative ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 border border-white rounded-md md:max-w-md text-white">
-            <SpotlightCard className="custom-spotlight-card">
-              <Link href="https://www.careerjustimagine.com/" target="_blank" className="absolute top-5 right-5">
-                <ExternalLink size={20} />
-              </Link>
-              <h4 className="text-xl font-bold font-heading text-gradient-green">
-                Just imagine careers
-              </h4>
-              <p className="text-sm opacity-70 uppercase mt-3">IMAGINE</p>
-              <div className="mt-4 mb-7 line-clamp-4">
-                A platform for searching full-time jobs and freelance projects, or
-                creating recruiter accounts. Includes identity card verification
-                for freelancers to ensure trust.
-              </div>
-
-              <div>
-                <p className="text-sm opacity-80 mb-3">Technologies:</p>
-                <div className="flex gap-x-5 text-white mt-5">
-                  <IconBrandMongodb />
-                  <IconBrandNodejs />
-                  <IconBrandReact />
-                  <IconBrandTailwind />
-                  <IconBrandAws />
                 </div>
-              </div>
-            </SpotlightCard>
-          </div>
-
-          <section
-            className="relative w-full cursor-pointer group overflow-hidden"
-            id={`grid1`}
-          >
-            <div
-              className="grid-inner flex h-full flex-row-reverse gap-x-4 "
-              data-scroll
-              data-scroll-speed="-6"
-              data-scroll-direction="horizontal"
+              </SpotlightCard>
+            </div>
+            <section
+              className="relative w-full cursor-pointer group overflow-hidden"
+              id={`grid${idx + 1}`}
             >
-              {imagineImagesGallary.map((image, imgIdx) => {
-                return (
+              <div
+                className="grid-inner flex h-full flex-row-reverse gap-x-4 "
+                data-scroll
+                data-scroll-speed="-6"
+                data-scroll-direction="horizontal"
+              >
+                {project.images.map((image, imgIdx) => (
                   <div className="min-w-[370px] min-h-[305px]" key={imgIdx}>
                     <Image
                       src={image}
@@ -216,123 +128,12 @@ const ProjectCards = () => {
                       className="w-full h-full object-cover rounded-md"
                     />
                   </div>
-                );
-              })}
-            </div>
-          </section>
-        </div>
-      </div>
-      <div className={"group"}>
-        <div className="mt-5 relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
-          <div className="relative  ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 border border-white rounded-md md:max-w-md text-white">
-            <SpotlightCard className="custom-spotlight-card w-full">
-
-              <Link href="http://gldreamhome.com/" target="_blank" className="absolute top-5 right-5">
-                <ExternalLink size={20} />
-              </Link>
-              <h4 className="text-xl font-bold font-heading text-gradient-orange">
-                Guideline dream home
-              </h4>
-              <p className="text-sm opacity-70 uppercase mt-3">FURNITURE</p>
-              <div className="mt-4 mb-7 line-clamp-4">
-                A furniture store with Stripe integration for secure payments and
-                advanced filtering options for easy product discovery.
+                ))}
               </div>
-
-              <div>
-                <p className="text-sm opacity-80 mb-3">Technologies:</p>
-                <div className="flex gap-x-5 text-white mt-5">
-                  <IconBrandMongodb />
-                  <IconBrandNodejs />
-                  <IconBrandReact />
-                  <IconBrandStripe />
-                  <IconBrandTailwind />
-                </div>
-              </div>
-            </SpotlightCard>
+            </section>
           </div>
-          <section
-            className="relative w-full cursor-pointer group overflow-hidden"
-            id={`grid1`}
-          >
-            <div
-              className="grid-inner flex h-full flex-row-reverse gap-x-4 "
-              data-scroll
-              data-scroll-speed="-6"
-              data-scroll-direction="horizontal"
-            >
-              {furnotureImagesGallary.map((image, imgIdx) => {
-                return (
-                  <div className="min-w-[370px] min-h-[280px]" key={imgIdx}>
-                    <Image
-                      src={image}
-                      width={1500}
-                      height={600}
-                      alt="Image"
-                      className="w-full h-full object-cover rounded-md"
-                    />
-                  </div>
-                );
-              })}
-            </div>
-          </section>
         </div>
-      </div>
-      <div className={"group"}>
-        <div className="mt-5 relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5">
-          <div className="relative ml-3 sm:ml-5 max-sm:ml-[4%] mr-6 border border-white rounded-md md:max-w-md text-white">
-            <SpotlightCard className="custom-spotlight-card w-full">
-              <Link href="https://squid.academy/" target="_blank" className="absolute top-5 right-5">
-                <ExternalLink size={20} />
-              </Link>
-              <h4 className="text-xl font-bold font-heading text-gradient-squid">
-                Squid Academy
-              </h4>
-              <p className="text-sm opacity-70 uppercase mt-3">SQUID</p>
-              <div className="mt-4 mb-7 line-clamp-4">
-                A project built in Next.js with server-side rendering, integrated
-                CMS for blogs, and an exceptional user interface.
-              </div>
-
-              <div>
-                <p className="text-sm opacity-80 mb-3">Technologies:</p>
-                <div className="flex gap-x-5 text-white mt-5">
-                  <IconBrandMongodb />
-                  <IconBrandJavascript />
-                  <IconBrandNextjs />
-                  <IconBrandTailwind />
-                  <IconBrandAws />
-                </div>
-              </div>
-            </SpotlightCard>
-          </div>
-          <section
-            className="relative w-full cursor-pointer group overflow-hidden"
-            id={`grid1`}
-          >
-            <div
-              className="grid-inner flex h-full flex-row-reverse gap-x-4 "
-              data-scroll
-              data-scroll-speed="-6"
-              data-scroll-direction="horizontal"
-            >
-              {squidImagesGallary.map((image, imgIdx) => {
-                return (
-                  <div className="min-w-[370px] min-h-[280px]" key={imgIdx}>
-                    <Image
-                      src={image}
-                      width={1500}
-                      height={600}
-                      alt="Image"
-                      className="w-full h-full object-cover rounded-md"
-                    />
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };
