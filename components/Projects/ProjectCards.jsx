@@ -96,7 +96,7 @@ const ProjectCards = () => {
                 <h4 className={`text-xl font-bold font-heading ${project.gradientClass}`}>
                   {project.title}
                 </h4>
-                <p className="text-sm opacity-70 uppercase mt-3">{project.category}</p>
+                <p className="shiny-text text-sm opacity-70 uppercase mt-3">{project.category}</p>
                 <div className="mt-4 mb-7 line-clamp-4">
                   {project.description}
                 </div>
