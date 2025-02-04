@@ -9,10 +9,13 @@ import Contact from "./Contact";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2500);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
