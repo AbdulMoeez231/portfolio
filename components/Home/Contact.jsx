@@ -1,16 +1,22 @@
-import { IconArrowUp } from "@tabler/icons-react";
+"use client"
 import { IoMailOutline } from "react-icons/io5";
 import { FiGithub } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { RiLinkedinLine } from "react-icons/ri";
 
-import React from "react";
+import React, { useState } from "react";
 import ContactForm from "../ContactForm/ContactForm";
+import { Particles } from "../Global/Particles";
 
 const Contact = () => {
+
+  const [particleQuantity, setParticleQuantity] = useState(() => {
+    return window.innerWidth <= 768 ? 85 : 155;
+  });
+
   return (
-    <>
-      <div className="bg-[#000000]">
+    <div className="relative !z-30">
+      <div>
         <div className="container py-10 md:py-20">
           <h1 className="text-white font-bold text-base sm:text-xl text-center">
             WHAT I DO
@@ -70,7 +76,12 @@ const Contact = () => {
         </div>
         <ContactForm />
       </div>
-    </>
+      <Particles
+        quantity={particleQuantity}
+        ease={55}
+        color={"#ffffff"}
+      />
+    </div>
   );
 };
 

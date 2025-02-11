@@ -61,7 +61,7 @@ function ContactForm() {
                 <label
                     className="text-sm font-bold text-[#FFFFFF] text-opacity-60 transition-colors duration-300"
                     htmlFor="email">
-                    Email Address
+                    Email
                 </label>
             </div>
 
