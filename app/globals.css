@@ -15,6 +15,20 @@ html {
 body {
   font-family: "Nunito", sans-serif;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dd2476;
+}
+
 .container {
   @apply mx-auto px-5 md:px-10 lg:px-12 xl:px-14 max-w-full lg:max-w-[1350px];
 }
@@ -247,7 +261,6 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
 
 .shiny-text {
   color: #b5b5b5a4;
