@@ -5,6 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { RiLinkedinLine } from "react-icons/ri";
 
 import React from "react";
+import ContactForm from "../ContactForm/ContactForm";
 
 const Contact = () => {
   return (
@@ -20,51 +21,54 @@ const Contact = () => {
         </div>
       </div>
       <div
-        className="container py-10 flex flex-col md:flex-row items-start justify-between gap-y-10"
+        className="container py-10 grid grid-cols-1 md:grid-cols-2 items-start justify-between gap-y-10"
         id="contact"
       >
-        <div>
-          <h2 className="text-neutral-400">
-            Thanks for reading this far, let's collaborate.
-          </h2>
-          <p className="text-white mt-3">
-            To begin developing your next great idea,{" "}
-            <span className="relative whitespace-nowrap">
-              <a href="mailto:moeezbuttab231@gmail.com">send me an email</a>
-              <div className="absolute w-full h-[2px] bg-gradient left-0 -bottom-1"></div>{" "}
-            </span>
-          </p>
+        <div className="space-y-10">
+          <div>
+            <h2 className="text-neutral-400">
+              Thanks for reading this far, let's collaborate.
+            </h2>
+            <p className="text-white mt-3">
+              To begin developing your next great idea,{" "}
+              <span className="relative whitespace-nowrap">
+                <a href="mailto:moeezbuttab231@gmail.com">send me an email</a>
+                <div className="absolute w-full h-[2px] bg-gradient left-0 -bottom-1"></div>{" "}
+              </span>
+            </p>
+          </div>
+          <div className="text-white text-xl flex gap-4">
+            <a
+              href="https://github.com/AbdulMoeez231/"
+              target="_blank"
+              className="border-[2px] border-neutral-400 p-2 rounded-full hover:border-white duration-500 cursor-pointer"
+            >
+              <FiGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abdul-moeez-6303a524b/"
+              target="_blank"
+              className="border-[2px] border-neutral-400 p-2 rounded-full hover:border-white duration-500 cursor-pointer"
+            >
+              <RiLinkedinLine />
+            </a>
+            <a
+              href="https://wa.me/923334186908"
+              target="_blank"
+              className="border-[2px] border-neutral-400 p-2 rounded-full hover:border-white duration-500 cursor-pointer"
+            >
+              <FaWhatsapp />
+            </a>
+            <a
+              href="mailto:moeezbuttab231@gmail.com"
+              target="_blank"
+              className="border-[2px] border-neutral-400 p-2 rounded-full hover:border-white duration-500 cursor-pointer"
+            >
+              <IoMailOutline />
+            </a>
+          </div>
         </div>
-        <div className="text-white text-xl flex gap-4">
-          <a
-            href="https://github.com/AbdulMoeez231/"
-            target="_blank"
-            className="border-[2px] border-neutral-400 p-2 rounded-full hover:border-white duration-500 cursor-pointer"
-          >
-            <FiGithub />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/abdul-moeez-6303a524b/"
-            target="_blank"
-            className="border-[2px] border-neutral-400 p-2 rounded-full hover:border-white duration-500 cursor-pointer"
-          >
-            <RiLinkedinLine />
-          </a>
-          <a
-            href="https://wa.me/923334186908"
-            target="_blank"
-            className="border-[2px] border-neutral-400 p-2 rounded-full hover:border-white duration-500 cursor-pointer"
-          >
-            <FaWhatsapp />
-          </a>
-          <a
-            href="mailto:moeezbuttab231@gmail.com"
-            target="_blank"
-            className="border-[2px] border-neutral-400 p-2 rounded-full hover:border-white duration-500 cursor-pointer"
-          >
-            <IoMailOutline />
-          </a>
-        </div>
+        <ContactForm />
       </div>
     </>
   );
