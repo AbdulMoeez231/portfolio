@@ -22,7 +22,7 @@ const HeroSection = () => {
           <p className="mt-5 text-white text-xs sm:text-base">
             Get in touch{" "}
             <span className="w-full relative">
-              <a href="mailto:moeezbuttab231@gmail.com">hello@abdulmoeez.me</a>
+              <a href="mailto:moeezbuttab231@gmail.com">hi@moeez.me</a>
               <div className="absolute w-full h-[2px] bg-gradient left-0 -bottom-1"></div>{" "}
             </span>
           </p>

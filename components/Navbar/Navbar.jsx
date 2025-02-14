@@ -81,7 +81,7 @@ const Navbar = () => {
               style={highlightStyle}
             />
           </ul>
-          <a href="https://www.upwork.com/freelancers/~010b08963f1fe8548f" target="_blank" className="gradient px-3 py-0.5 rounded-sm font-medium text-[10px] xs:text-sm md:text-base whitespace-nowrap active:scale-75 duration-200">Hire Me</a>
+          <a href="/moeez-cv.pdf" download target="_blank" className="gradient px-3 py-0.5 rounded-sm font-medium text-[10px] xs:text-sm md:text-base whitespace-nowrap active:scale-75 duration-200">Hire Me</a>
         </div>
       </div>
     </>
