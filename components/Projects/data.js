@@ -20,9 +20,9 @@ export const projects = [
         technologies: [<IconBrandPhp />, <IconBrandLaravel />, <IconBrandReact />, <IconBrandTailwind />, <span className="text-sm text-white font-bold">AI</span>],
         images: [
             "/assets/skin-os/img-4.png",
+            "/assets/skin-os/img-2.png",
             "/assets/skin-os/img-1.png",
             "/assets/skin-os/img-3.png",
-            "/assets/skin-os/img-2.png",
             "/assets/skin-os/img-5.png",
         ],
         gradientClass: "text-gradient-skinos",
@@ -45,16 +45,32 @@ export const projects = [
         category: "IMAGINE",
     },
     {
+        title: "Squid LMS",
+        link: "https://squid.academy/",
+        description:
+            "Developed a full-fledged Learning Management System using the MERN stack, enabling seamless course management, user authentication, role-based access, and interactive learning experiences.",
+        technologies: [<IconBrandMongodb />, <IconBrandJavascript />, <IconBrandNextjs />, <IconBrandTailwind />, <IconBrandAws />],
+        images: [
+            "/assets/lms/img-5.png",
+            "/assets/lms/img-4.png",
+            "/assets/lms/img-2.png",
+            "/assets/lms/img-3.png",
+            "/assets/lms/img-1.png",
+        ],
+        gradientClass: "text-gradient-squid",
+        category: "LMS",
+    },
+    {
         title: "Guideline dream home",
         link: "http://gldreamhome.com/",
         description:
             "A furniture store with Stripe integration for secure payments and advanced filtering options for easy product discovery.",
         technologies: [<IconBrandMongodb />, <IconBrandNodejs />, <IconBrandReact />, <IconBrandStripe />, <IconBrandTailwind />],
         images: [
-            "/assets/furniture/img-4.png",
-            "/assets/furniture/img-1.jpg",
-            "/assets/furniture/img-3.png",
             "/assets/furniture/img-2.png",
+            "/assets/furniture/img-3.png",
+            "/assets/furniture/img-1.jpg",
+            "/assets/furniture/img-4.png",
             "/assets/furniture/img-5.png",
         ],
         gradientClass: "text-gradient-orange",
@@ -67,13 +83,13 @@ export const projects = [
             "A project built in Next.js with server-side rendering, integrated CMS for blogs, and an exceptional user interface.",
         technologies: [<IconBrandMongodb />, <IconBrandJavascript />, <IconBrandNextjs />, <IconBrandTailwind />, <IconBrandAws />],
         images: [
+            "/assets/squid-academy/img-5.png",
             "/assets/squid-academy/img-4.png",
+            "/assets/squid-academy/img-2.png",
             "/assets/squid-academy/img-3.png",
             "/assets/squid-academy/img-1.png",
-            "/assets/squid-academy/img-2.png",
-            "/assets/squid-academy/img-5.png",
         ],
         gradientClass: "text-gradient-squid",
         category: "SQUID",
-    },
+    }
 ];

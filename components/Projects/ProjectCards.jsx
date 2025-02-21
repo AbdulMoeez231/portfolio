@@ -15,6 +15,7 @@ function mapRange(in_min, in_max, input, out_min, out_max) {
 
 const ProjectCards = () => {
   const [windowWidth, setWindowWidth] = useState();
+  const [showAll, setShowAll] = useState(false);
   const cardRefs = useRef([]);
 
   useEffect(() => {
@@ -80,7 +81,7 @@ const ProjectCards = () => {
 
   return (
     <div className="mt-10 space-y-10">
-      {projects.map((project, idx) => (
+      {projects.slice(0, showAll ? projects.length : 3).map((project, idx) => (
         <div className="group" key={idx}>
           <div
             className="mt-5 relative overflow-hidden flex flex-col md:flex-row md:items-center gap-y-5 mb-2.5"
@@ -125,7 +126,7 @@ const ProjectCards = () => {
                       width={1500}
                       height={600}
                       alt="Image"
-                      className="w-full h-full object-cover rounded-md"
+                      className="w-full h-full object-cover object-center rounded-md"
                     />
                   </div>
                 ))}
@@ -134,6 +135,14 @@ const ProjectCards = () => {
           </div>
         </div>
       ))}
+      {!showAll && (
+        <button
+          onClick={() => setShowAll(true)}
+          className="block w-max mx-auto !mt-14 px-4 py-2 gradient text-white rounded-md"
+        >
+          Show More
+        </button>
+      )}
     </div>
   );
 };
