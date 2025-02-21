@@ -46,7 +46,7 @@ export const projects = [
     },
     {
         title: "Squid LMS",
-        link: "https://squid.academy/",
+        link: "https://squid.gg/",
         description:
             "Developed a full-fledged Learning Management System using the MERN stack, enabling seamless course management, user authentication, role-based access, and interactive learning experiences.",
         technologies: [<IconBrandMongodb />, <IconBrandJavascript />, <IconBrandNextjs />, <IconBrandTailwind />, <IconBrandAws />],
