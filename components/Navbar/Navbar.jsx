@@ -63,7 +63,7 @@ const Navbar = () => {
               <a href="#capabilities">Capabilities</a>
             </li>
             <li
-              className="cursor-pointer px-2 md:px-5 max-sm:hidden"
+              className="cursor-pointer px-2 md:px-5"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
