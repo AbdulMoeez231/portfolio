@@ -63,7 +63,7 @@ const Navbar = () => {
               <a href="#capabilities">Capabilities</a>
             </li>
             <li
-              className="cursor-pointer px-2 md:px-5 max-sm:hidden"
+              className="cursor-pointer px-2 md:px-5"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
@@ -81,8 +81,7 @@ const Navbar = () => {
               style={highlightStyle}
             />
           </ul>
-          <a href="/moeez-cv.pdf" download target="_blank" className="gradient px-3 py-0.5 rounded-sm font-medium text-[10px] xs:text-sm md:text-base whitespace-nowrap active:scale-75 duration-200">Hire Me</a>
-        </div>
+          </div>
       </div>
     </>
   );
