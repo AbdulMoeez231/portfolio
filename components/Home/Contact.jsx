@@ -52,7 +52,7 @@ const Contact = () => {
               <FiGithub />
             </a>
             <a
-              href="https://www.linkedin.com/in/abdul-moeez-6303a524b/"
+              href="https://www.linkedin.com/in/abdul-moeez-waseem/"
               target="_blank"
               className="border-[2px] border-neutral-400 p-2 rounded-full hover:border-white duration-500 cursor-pointer"
             >
