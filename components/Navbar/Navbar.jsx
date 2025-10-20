@@ -81,7 +81,8 @@ const Navbar = () => {
               style={highlightStyle}
             />
           </ul>
-          </div>
+          <a href="#contact" className="gradient px-3 py-0.5 rounded-sm font-medium text-[10px] xs:text-sm md:text-base whitespace-nowrap active:scale-75 duration-200">Hire Me</a>
+        </div>
       </div>
     </>
   );
